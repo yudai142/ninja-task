@@ -2,6 +2,7 @@
   <nav>
 
     <v-toolbar flat app>
+      <v-app-bar-nav-icon @click="drawer = !drawer" class="grey--text"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-light">Todo</span>
         <span>Ninja</span>
@@ -13,6 +14,10 @@
       </v-btn>
     </v-toolbar>
 
+    <v-navigation-drawer app v-model="drawer" class="indigo" fixed temporary>
+      <p>test</p>
+    </v-navigation-drawer>
+
   </nav>
 </template>
 
@@ -20,6 +25,7 @@
 export default {
   data() {
     return {
+      drawer: false
     }
   }
 }
